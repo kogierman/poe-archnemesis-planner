@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/poe-archnemesis-planner/static/css/main.2852340c.css",
+    "main.js": "/poe-archnemesis-planner/static/js/main.4ddbbe4c.js",
+    "static/js/787.113d59b6.chunk.js": "/poe-archnemesis-planner/static/js/787.113d59b6.chunk.js",
+    "index.html": "/poe-archnemesis-planner/index.html",
+    "main.2852340c.css.map": "/poe-archnemesis-planner/static/css/main.2852340c.css.map",
+    "main.4ddbbe4c.js.map": "/poe-archnemesis-planner/static/js/main.4ddbbe4c.js.map",
+    "787.113d59b6.chunk.js.map": "/poe-archnemesis-planner/static/js/787.113d59b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2852340c.css",
+    "static/js/main.4ddbbe4c.js"
+  ]
+}

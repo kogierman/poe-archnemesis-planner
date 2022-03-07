@@ -1,0 +1,213 @@
+.item-box {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 2px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant-ligatures: none;
+  color: var(--poe-color-default);
+  background-color: #000;
+  transition-property: max-height;
+  transition-duration: 160ms;
+  transition-timing-function: ease-in-out;
+  max-height: 34px;
+  overflow: hidden;
+}
+
+.item-box a,
+.item-box a:visited,
+.item-box a:active {
+  color: unset;
+}
+
+.item-box.-normal {
+  border-color: var(--poe-color-normal);
+}
+
+.item-box.-magic {
+  border-color: var(--poe-color-magic);
+}
+
+.item-box.-currency {
+  border-color: var(--poe-color-currency);
+}
+
+.item-box.-prophecy {
+  border-color: var(--poe-color-prophecy);
+}
+
+.item-box > .header {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  align-items: center;
+}
+
+.item-stats {
+  position: relative;
+  z-index: 1;
+  padding: 7px 18px;
+  margin: 0 auto;
+}
+
+.item-box:hover {
+  max-height: 100%;
+  transition-delay: 0.3s;
+}
+
+.item-box.-gem {
+  border-color: var(--poe-color-gem);
+}
+
+.item-box.-gem > .header {
+  color: var(--poe-color-gem);
+}
+
+.item-box.-gem > .header.-single {
+  background-position: left -306px, right -374px, center -340px;
+}
+
+.item-box.-gem > .item-stats > .group::after,
+.item-stat-separator.-gem::before {
+  background-position: 0 -10px;
+}
+
+.item-box.-normal > .header {
+  color: var(--poe-color-normal);
+}
+
+.item-box.-magic > .header {
+  color: var(--poe-color-magic);
+}
+
+.item-box.-currency > .header {
+  color: var(--poe-color-currency);
+}
+
+.item-box.-prophecy > .header {
+  color: var(--poe-color-prophecy);
+}
+
+.item-box > .header.-single {
+  background-image: url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
+    url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
+    url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png);
+}
+
+.item-box > .header.-single {
+  padding: 3px 32px;
+  height: 28px;
+  line-height: 25px;
+}
+
+.item-box.-normal > .header.-single {
+  background-position: left 0, right -68px, center -34px;
+}
+
+.item-box.-magic > .header.-single {
+  background-position: left -102px, right -170px, center -136px;
+}
+
+.item-box.-currency > .header.-single {
+  background-position: left -204px, right -272px, center -238px;
+}
+
+.item-box.-prophecy > .header.-single {
+  background-position: left -510px, right -578px, center -544px;
+}
+
+.item-box.-quest {
+  border-color: var(--poe-color-quest);
+}
+
+.item-box.-quest > .header {
+  color: var(--poe-color-quest);
+}
+
+.item-box.-quest > .header.-single {
+  background-position: left -408px, right -476px, center -442px;
+}
+
+.item-box.-quest > .item-stats > .group::after,
+.item-stat-separator.-quest::before {
+  background-position: 0 -12px;
+}
+
+.item-stats.-nopad {
+  padding: 0;
+}
+
+.item-stats > .group {
+  display: block;
+  margin: 0 auto;
+}
+
+.item-stats > .group:nth-last-child(n + 2)::after,
+.item-stat-separator::before {
+  display: block;
+  margin: 5px auto;
+  width: 221px;
+  height: 2px;
+  background-image: url(https://www.poewiki.net/w/images/e/ef/Item-ui-separators.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.item-box.-magic > .item-stats > .group::after,
+.item-stat-separator.-magic::before {
+  background-position: 0 -2px;
+}
+
+.item-box.-currency > .item-stats > .group::after,
+.item-stat-separator.-currency::before {
+  background-position: 0 -8px;
+}
+
+.item-box.-prophecy > .item-stats > .group::after,
+.item-stat-separator.-prophecy::before {
+  background-position: 0 -14px;
+}
+
+.item-recipe {
+  display: inline-block;
+  height: 0;
+  width: 25%;
+  padding-bottom: 25%;
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.item-recipe > img {
+  width: 75%;
+  object-fit: contain;
+}
+
+.item-box > .header > .symbol {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 34px;
+}
+
+.item-box > .header > .symbol:first-child {
+  left: 0;
+}
+
+.item-box > .header > .symbol:last-child {
+  right: 0;
+}

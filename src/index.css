@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  font-family: 'FontinSmallCaps', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'FontinSmallCaps';
+  src: url('https://web.poecdn.com/font/fontin-smallcaps-webfont.eot');
+  src: local('?'),
+    url('https://web.poecdn.com/font/fontin-smallcaps-webfont.woff')
+      format('woff'),
+    url('https://web.poecdn.com/font/fontin-smallcaps-webfont.ttf')
+      format('truetype'),
+    url('https://web.poecdn.com/font/fontin-smallcaps-webfont.svg#webfontSCusr8QL')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: content-box;
+}

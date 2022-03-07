@@ -79,7 +79,8 @@ function CentralView({ selected, currentIdx, setCurrentIdx, deselect }) {
           <div className="rewards">
             {_.map(rewards, (m, r) => (
               <div>
-                <img src={`./assets/${r}.png`} /> {m > 1 && `x${m}`}
+                <img src={`./assets/${r.toLowerCase()}.png`} />{' '}
+                {m > 1 && `x${m}`}
               </div>
             ))}
           </div>

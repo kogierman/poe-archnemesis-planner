@@ -1,5 +1,8 @@
 import _ from 'lodash'
 import './index.css'
+
+import Bar from '../Bar'
+
 function Stats({ selected }) {
   const stats = _.reduce(
     selected,
@@ -13,13 +16,19 @@ function Stats({ selected }) {
     {},
   )
   return (
-    <div className="stats">
-      <div className="header">Monster stats</div>
-      <div className="stats-list tc -mod">
-        {_.map(stats, (s, name) => (
-          <p>{name.replace('$', s)}</p>
-        ))}
+    <div className="stat-container">
+      <Bar type="bar-header" />
+      <div className="stats">
+        <div className="header">Monster stats</div>
+        <div className="stats-list-container">
+          <div className="stats-list tc -mod">
+            {_.map(stats, (s, name) => (
+              <p>{name.replace('$', s)}</p>
+            ))}
+          </div>
+        </div>
       </div>
+      <Bar type="footer" />
     </div>
   )
 }

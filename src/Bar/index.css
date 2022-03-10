@@ -1,0 +1,17 @@
+.bar {
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  height: 61px;
+}
+
+.bar-header {
+  grid-area: header;
+  background-image: url(../../public/assets/header.png);
+}
+
+.footer {
+  grid-area: footer;
+  background-image: url(../../public/assets/footer.png);
+  margin-top: -20px;
+}

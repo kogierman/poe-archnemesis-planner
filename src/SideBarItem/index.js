@@ -8,41 +8,23 @@ const tierStyles = {
   4: 'quest',
 }
 
-function SideListItem({ mod, data, select, selected }) {
+function SideListItem({ mod, select, selected, onMouseEnter, onMouseLeave }) {
   const isSelected = _.some(selected, (s) => s.name === mod.name)
+  const isPartOfRecipe = _.some(selected, (s) => mod.recipe?.includes(s.name))
   return (
     <div
-      className={`item-box -${tierStyles[mod.tier]}`}
+      className={`item-box -${tierStyles[mod.tier]} open ${
+        isPartOfRecipe ? 'recipe' : ''
+      }`}
       style={{
         display: isSelected ? 'none' : 'block',
       }}
       onClick={() => select(mod)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
+      <img src={mod.img} />
       <div className={`header -single`}>{mod.name}</div>
-      <div className="item-stats">
-        <div className="group tc -mod">{mod.mod}</div>
-        <div className="group">
-          {mod.rewards.map((r) => (
-            <img src={`./assets/${r.toLowerCase()}.png`} />
-          ))}
-        </div>
-        {mod.specialMod && <div className="group">{mod.specialMod}</div>}
-        <div className="group">
-          <img className="item-icon" src={mod.img} />
-          <br />
-        </div>
-        {!_.isEmpty(mod.recipe) && (
-          <div className="group">
-            {mod.recipe.map((r) => (
-              <div className="item-recipe">
-                <img src={_.find(data, (d) => d.name === r).img} />
-                <br />
-                {r}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
     </div>
   )
 }

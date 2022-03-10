@@ -1,9 +1,24 @@
-.stats {
+.stat-container {
   grid-area: statlist;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    '. content .'
+    'footer footer footer';
+  grid-template-columns: 13px 569px 12px;
+  grid-template-rows: 41px 569px 41px;
+  width: 592px;
+}
+
+.stats {
+  grid-area: content;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  border: 1px solid var(--poe-color-currency);
+  background-image: url(https://web.poecdn.com/image/inventory/StashPanelMap.png);
 }
 
 .stats > .header {
@@ -12,24 +27,30 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.1em;
   text-align: center;
   background-repeat: no-repeat, no-repeat, repeat-x;
   align-items: center;
   color: var(--poe-color-currency);
   padding: 3px 32px;
-  height: 25px;
+  height: 28px;
   line-height: 25px;
   margin-bottom: 5px;
-  border: 1px solid var(--poe-color-currency);
   background-position: left -204px, right -272px, center -238px;
   background-image: url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
     url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
     url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png);
 }
 
-.stats > .stats-list {
-  padding: 0 5%;
+.stats > .stats-list-container {
+  width: 70%;
+  height: 70%;
+  padding: 10%;
+  background-image: url(https://web.poecdn.com/image/ascendancy/2.png);
+  background-size: 100% 100%;
+}
+
+.stats > .stats-list-container > .stats-list {
   height: 100%;
   overflow-y: scroll;
 }

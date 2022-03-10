@@ -1,0 +1,92 @@
+.item-stats {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.item-recipe {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.item-recipe > span {
+  text-align: center;
+}
+
+.item-recipe > img {
+  object-fit: contain;
+}
+
+.top {
+  background: url(https://web.poecdn.com/image/gen/dropdown-sprite.png)
+    no-repeat;
+  background-position: 0px -24px;
+  width: 204px;
+  height: 24px;
+  top: -14px;
+  grid-area: top;
+}
+
+.bot {
+  background: url(https://web.poecdn.com/image/gen/dropdown-sprite.png)
+    no-repeat;
+  background-position: 0px 0px;
+  width: 204px;
+  height: 24px;
+  bottom: -13px;
+  grid-area: bot;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  grid-area: highlight;
+  font-size: 0.8em;
+}
+
+.highlight > .mod {
+  text-align: center;
+  color: var(--poe-color-currency);
+}
+
+.tier1 {
+  color: var(--poe-color-normal);
+}
+
+.tier2 {
+  color: var(--poe-color-magic);
+}
+
+.tier3 {
+  color: var(--poe-color-gem);
+}
+
+.tier4 {
+  color: var(--poe-color-quest);
+}
+
+.details {
+  width: 400px;
+  display: grid;
+  grid-template-areas:
+    '. top .'
+    'highlight highlight highlight'
+    '. bot .';
+  grid-template-columns: auto 204px auto;
+  grid-template-rows: 24px auto 24px;
+}
+
+.group {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

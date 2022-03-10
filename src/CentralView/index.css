@@ -1,16 +1,25 @@
+.container {
+  grid-area: container;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    '. content .'
+    'footer footer footer';
+  grid-template-columns: 13px 569px 12px;
+  grid-template-rows: 41px 569px 41px;
+  width: 592px;
+}
+
 .central-view {
   grid-area: content;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   overflow-y: scroll;
-  border: 1px solid var(--poe-color-currency);
-}
-
-.selector {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  background-image: url(https://web.poecdn.com/image/inventory/StashPanelMap.png);
 }
 
 .central-view > .header {
@@ -19,15 +28,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.1em;
   text-align: center;
   background-repeat: no-repeat, no-repeat, repeat-x;
   align-items: center;
   color: var(--poe-color-currency);
   padding: 3px 32px;
-  height: 25px;
+  height: 28px;
   line-height: 25px;
-  border: 1px solid var(--poe-color-currency);
   margin-bottom: 5px;
   background-position: left -204px, right -272px, center -238px;
   background-image: url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
@@ -35,10 +43,17 @@
     url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png);
 }
 
+.selector {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .selector > .content {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-top: 5%;
   padding-bottom: 5%;
   text-align: center;
   place-items: center;
@@ -47,10 +62,9 @@
 
 .selector > .content > .modifiers {
   margin: 5%;
-  width: 60%;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
   align-items: center;
 }
 
@@ -58,52 +72,76 @@
   display: flex;
   margin: 5%;
   width: 80%;
+  height: 100px;
   align-items: center;
   justify-content: center;
   overflow: scroll;
+  background-image: url(https://web.poecdn.com/image/ascendancy/2.png);
+  background-size: 100% 100%;
+  font-size: 0.9em;
 }
 
-.selector > .content > .modifiers > .mod {
+.selector > .content > .modifiers > div {
+  display: flex;
+  transform: rotate(0deg);
+  justify-content: center;
+  align-items: center;
+}
+
+.selector > .content > .modifiers > div > .mod {
   margin: 1%;
   width: 98%;
   height: 0;
   padding-bottom: 98%;
   border-radius: 5%;
-  box-shadow: inset 0px 0px 5px 5px var(--poe-color-currency);
+  background-image: url(https://web.poecdn.com/image/inventory/Grid.png?1646104464745);
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
 }
 
-.selector > .content > .modifiers > .selected {
-  box-shadow: inset 0px 0px 5px 5px var(--poe-color-unique);
+.selector > .content > .modifiers > div > .selected {
+  box-shadow: inset 0px 0px 2px 2px var(--poe-color-currency);
+  /* border: 1px solid var(--poe-color-currency); */
 }
 
-.selector > .content > .modifiers > .mod > img {
-  width: 100%;
+.selector > .content > .modifiers > div > .mod > img {
+  width: 90%;
   object-fit: contain;
 }
 
-.selector > .content > .modifiers > .mod > .tooltip {
-  overflow: hidden;
-  background-color: black;
+.selector > .content > .modifiers > div > .modlabel {
+  box-sizing: border-box;
+  background-color: #000;
+  opacity: 0.5;
   color: var(--poe-color-currency);
-  border: none;
-  max-height: 0px;
-  max-width: 0;
-  position: relative;
-  top: -20px;
-  left: 40px;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  right: 20%;
   text-align: center;
   word-break: keep-all;
   word-wrap: none;
-  transition-property: max-height max-width;
-  transition-duration: 260ms;
-  transition-timing-function: ease-in-out;
-  font-size: 14px;
+  transition-property: max-height;
+  transition-duration: 240ms;
+  transition-timing-function: ease-in;
+  font-size: 0.9em;
+}
+.selector > .content > .modifiers > div > .modlabel > span {
+  margin: auto;
+  text-align: center;
 }
 
-.selector > .content > .modifiers > .mod:hover .tooltip {
-  max-width: 100px;
-  transition-delay: 0.1s;
-  max-height: 100px;
-  z-index: 500;
-  border: 1px solid var(--poe-color-currency);
+.selector > .content > .modifiers > div:hover .modlabel {
+  max-height: 100%;
+}
+
+.recipes {
+  display: flex;
+}
+
+.recipes div {
+  padding: 5%;
 }

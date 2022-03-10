@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/poe-archnemesis-planner/static/css/main.2852340c.css",
-    "main.js": "/poe-archnemesis-planner/static/js/main.3d578c11.js",
+    "main.css": "/poe-archnemesis-planner/static/css/main.ed9167aa.css",
+    "main.js": "/poe-archnemesis-planner/static/js/main.f5bc73aa.js",
     "static/js/787.113d59b6.chunk.js": "/poe-archnemesis-planner/static/js/787.113d59b6.chunk.js",
+    "static/media/header.png": "/poe-archnemesis-planner/static/media/header.61ac1a554d38b62b78d8.png",
+    "static/media/footer.png": "/poe-archnemesis-planner/static/media/footer.f403e50e17c4e33efb9f.png",
     "index.html": "/poe-archnemesis-planner/index.html",
-    "main.2852340c.css.map": "/poe-archnemesis-planner/static/css/main.2852340c.css.map",
-    "main.3d578c11.js.map": "/poe-archnemesis-planner/static/js/main.3d578c11.js.map",
+    "main.ed9167aa.css.map": "/poe-archnemesis-planner/static/css/main.ed9167aa.css.map",
+    "main.f5bc73aa.js.map": "/poe-archnemesis-planner/static/js/main.f5bc73aa.js.map",
     "787.113d59b6.chunk.js.map": "/poe-archnemesis-planner/static/js/787.113d59b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2852340c.css",
-    "static/js/main.3d578c11.js"
+    "static/css/main.ed9167aa.css",
+    "static/js/main.f5bc73aa.js"
   ]
 }

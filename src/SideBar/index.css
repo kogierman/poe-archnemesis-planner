@@ -1,40 +1,82 @@
 .sidebar {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-  border: 1px solid var(--poe-color-currency);
   grid-area: modlist;
+  background-color: #000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-.sidebar > .header {
+.sidebar > .list {
+  height: auto;
+  overflow-y: scroll;
   display: block;
+  margin: 0 2%;
+  width: 100%;
+}
+
+.sidebar > * > .header {
   overflow: hidden;
-  position: relative;
+  z-index: 5;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.1em;
   text-align: center;
   background-repeat: no-repeat, no-repeat, repeat-x;
   align-items: center;
-  color: var(--poe-color-currency);
   padding: 3px 32px;
-  height: 25px;
+  height: 28px;
   line-height: 25px;
   margin-bottom: 5px;
-  border: 1px solid var(--poe-color-currency);
-  background-position: left -204px, right -272px, center -238px;
   background-image: url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
     url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png),
     url(https://www.poewiki.net/w/images/9/9b/Item-ui-header-single.png);
 }
 
-.sidebar > .input {
+.sidebar > .details {
+  display: inline-block;
+  padding: 3%;
+  text-align: center;
+  justify-content: center;
+  max-width: 25%;
+  word-wrap: break-word;
+}
+
+.sidebar > .details > .checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar > * > .header.-normal {
+  color: var(--poe-color-normal);
+  background-position: left 0, right -68px, center -34px;
+}
+.sidebar > * > .header.-magic {
+  color: var(--poe-color-magic);
+  background-position: left -102px, right -170px, center -136px;
+}
+
+.sidebar > * > .header.-gem {
+  color: var(--poe-color-gem);
+  background-position: left -306px, right -374px, center -340px;
+}
+
+.sidebar > * > .header.-quest {
+  color: var(--poe-color-quest);
+  background-position: left -408px, right -476px, center -442px;
+}
+
+.sidebar > .searchbox {
+}
+
+.sidebar > .searchbox > .input {
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
   overflow: hidden;
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 1.1em;
   background-repeat: no-repeat, no-repeat, repeat-x;
   align-items: center;
   color: var(--poe-color-normal);
@@ -46,15 +88,10 @@
   line-height: 25px;
   background-position: left 0, right -68px, center -34px;
   font-family: 'FontinSmallCaps';
-  margin-bottom: 10px;
-  width: 100%;
+  margin: 5%;
+  width: 90%;
 }
 
-.sidebar > .input:focus {
+.sidebar > .searchbox > .input:focus {
   outline: none;
-}
-
-.sidebar > .list {
-  height: calc(100% - 75px);
-  overflow-y: scroll;
 }
